@@ -1,3 +1,27 @@
-<ul *ngFor="let item of list; let i=index">
-    <li *ngIf="i%2===0">{{item.name}}</li>
+<ul *ngFor="let item of list">
+    <div *ngIf="item.id%2===0">
+        INFORMATION :
+        <li>name: {{item.name}}</li>
+        <li>username: {{item.username}}</li>
+        <li>email: {{item.email}}</li>
+        <ul>ADDRESS :
+            <li>street: {{item.address.street}}</li>
+            <li>suite: {{item.address.suite}}</li>
+            <li>city: {{item.address.city}}</li>
+            <li>zipcode: {{item.address.zipcode}}</li>
+            <ul>GEO :
+                <li>lat: {{item.address.geo.lat}}</li>
+                <li>lng: {{item.address.geo.lng}}</li>
+            </ul>
+        </ul>
+        <li>phone: {{item.phone}}</li>
+        <li>website: {{item.website}}</li>
+        <ul>COMPANY :
+            <li>name: {{item.company.name}}</li>
+            <li>catchPhrase: {{item.company.catchPhrase}}</li>
+            <li>bs: {{item.company.bs}}</li>
+        </ul>
+
+    </div>
+
 </ul>
