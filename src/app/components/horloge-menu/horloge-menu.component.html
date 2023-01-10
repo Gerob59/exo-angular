@@ -1,0 +1,6 @@
+<div>
+    <p *ngFor="let timezone of timezones">
+        <span>{{timezone.split("/")[1].replace("_", " ")}} :</span>
+        <app-horloge [time]="setTime(timezone)"></app-horloge>
+    </p>
+</div>
